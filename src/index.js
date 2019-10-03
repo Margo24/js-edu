@@ -9,6 +9,11 @@ module.exports = function getTimeForEducation(
     knowsProgramming = true,
     config = {family: 4}
     ) {
-      return 0;
+
+      const HoursToMasterLanguage = 800;
+      const HoursToLearnBasics = 500;
+      const TotalTime = knowsProgramming ? HoursToMasterLanguage:HoursToMasterLanguage+HoursToLearnBasics;
+      //расчет общего времени
+      return Math.ceil(TotalTime/config[focus]);
   };
   
